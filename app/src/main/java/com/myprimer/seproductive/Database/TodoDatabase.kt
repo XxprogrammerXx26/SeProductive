@@ -3,6 +3,7 @@ package com.myprimer.seproductive.Database
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.myprimer.seproductive.Modelo.Todo
 
 
 @Database(entities = [Todo::class], version = 1)

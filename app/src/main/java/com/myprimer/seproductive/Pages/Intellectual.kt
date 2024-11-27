@@ -21,6 +21,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.myprimer.seproductive.Modelo.Screen
+import com.myprimer.seproductive.Modelo.TodoViewModel
 import com.myprimer.seproductive.R
 
 
@@ -36,10 +39,10 @@ fun Intellectual(navController: NavController, modifier: Modifier = Modifier, vi
     ) {
         // Juego 1: Acertijos lógicos
         IntellectualGameItem(
-            imageRes = R.drawable.puzzles2,
+            imageRes = R.drawable.cultura,
             description = "¡Desafía tu mente con cultura general!",
             onClick = {
-                //    navController.navigate(Screen.AcertijoGame.route)
+                    navController.navigate(Screen.Cultura.route)
             }
         )
 

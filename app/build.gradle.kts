@@ -1,12 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
     id("kotlin-kapt")
 }
 
 android {
     namespace = "com.myprimer.seproductive"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.myprimer.seproductive"
@@ -60,6 +61,10 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.support.annotations)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -69,6 +74,22 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
 
+
+
+    //Icons Extendidos
+    implementation("androidx.compose.material:material-icons-extended:1.3.1")
+    implementation ("io.coil-kt:coil-compose:2.3.0")  // Última versión estable
+    implementation ("androidx.compose.ui:ui:1.5.0")  // O la versión más reciente
+
+
+
+
+    // Firebase Authentication (para autenticación de usuarios)
+
+    implementation ("com.google.android.gms:play-services-auth:20.4.1")
+    implementation ("com.google.firebase:firebase-auth-ktx")
+    implementation(platform("com.google.firebase:firebase-bom:31.2.2"))
+    implementation ("com.google.firebase:firebase-firestore-ktx")
 
 
 
